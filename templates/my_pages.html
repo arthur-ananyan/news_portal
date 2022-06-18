@@ -9,16 +9,16 @@
     <meta name="generator" content="Mobirise v4.11.6, mobirise.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="shortcut icon" href="{% static 'assets/images/scraper-39-1109688-140x140.png' %}" type="image/x-icon">
-    <meta name="description" content="">
+    <meta name="description" content="Website Generator Description">
 
-    <title>News Portal Main</title>
+    <title>Scrape it.. My pages</title>
     <link rel="stylesheet" href="{% static 'assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css' %}">
     <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-grid.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap-reboot.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/animatecss/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/tether/tether.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/dropdown/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/animatecss/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/theme/css/style.css' %}">
     <link rel="preload" as="style" href="{% static 'assets/mobirise/css/mbr-additional.css' %}">
     <link rel="stylesheet" href="{% static 'assets/mobirise/css/mbr-additional.css' %}" type="text/css">
@@ -54,76 +54,72 @@
                     </span>
                     <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4"
                             href="{% url 'main' %}">
-                            Լուրերի Պորտալ</a></span>
+                            Scrape it..</a></span>
                 </div>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                    <li class="nav-item"><a class="nav-link link text-white display-4" href="{% url 'my_pages' %}"><span
-                                class="mbrib-bookmark mbr-iconfont mbr-iconfont-btn"></span>
-                            Բաժանորդագրված &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a></li>
-
-                    <li class="nav-item"><a class="nav-link link text-white display-4">Ողջույն {{ user.username}} &nbsp;
+                    <li class="nav-item"><a class="nav-link link text-white display-4" href="{% url 'main' %}"><span
+                                class="mbrib-home mbr-iconfont mbr-iconfont-btn"></span>
+                            Home &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white display-4"
+                            href=""><span
+                                class="mbrib-link mbr-iconfont mbr-iconfont-btn"></span>Add page &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a></li>
+                    <li class="nav-item"><a class="nav-link link text-blue display-5">Hi {{ user.username}} &nbsp;
                             &nbsp; &nbsp;
                             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a></li>
                 </ul>
-                <div class="navbar-buttons mbr-section-btn">
-                    <a class="btn btn-sm btn-primary display-4" href="{% url 'logout' %}"><span
-                            class="mbrib-logout mbr-iconfont mbr-iconfont-btn"></span>
+                <div class="navbar-buttons mbr-section-btn"> <a class="btn btn-sm btn-primary display-4"
+                        href="{% url 'logout' %}"><span class="mbrib-logout mbr-iconfont mbr-iconfont-btn"></span>
 
-                        Դուրս Գալ</a></div>
+                        Log out</a></div>
             </div>
         </nav>
     </section>
 
-
-    <section class="mbr-section form3 cid-rKLkxGLuek" id="form3-1k">
-
-
-    </section>
-
-    <section class="timeline1 cid-rKKV52p5OW" id="timeline1-12">
-        <div class="container align-center">
-            <h2 class="mbr-section-title pb-3 mbr-fonts-style display-2">
-                Լրահոս
-            </h2>
-            <h3 class="mbr-section-subtitle pb-5 mbr-fonts-style display-5">
-                Լուրեր Ձեր բաժանորդագրություններից
-            </h3>
-
-            <div class="container timelines-container" mbri-timelines="">
+    <section class="engine"><a href="https://mobirise.info/c">web builder</a></section>
+    <section class="testimonials5 cid-rKL9X265ab" id="testimonials5-1g">
 
 
-                <!--1-->
-
-                {% for news in news %}
-                <div class="row timeline-element reverse separline">
-                    <div class="timeline-date-panel col-xs-12 col-md-6  align-left">
-                        <div class="time-line-date-content">
-                            <p class="mbr-timeline-date mbr-fonts-style display-7"><a
-                                    href="{{ news.news_url }}" target="_blank">
 
 
-                                {{ news.news_text }}
-                                <br>
-                                <br>
-                                {{ news.news_date }}
-                                  </a>
-                            </p>
+        <div class="container">
+            <div class="media-container-row">
+                <div class="title col-12 align-center">
+                    <h2 class="pb-3 mbr-fonts-style display-2">
+                        Here are the pages you follow..</h2>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="media-container-column">
+
+
+                {% for page in subscription %}
+                <div class="mbr-testimonial align-center col-12 col-md-10">
+
+                    <div class="panel-item">
+                        <div class="card-block"><a href="">
+                                <div class="testimonial-photo">
+                                    <img src="">
+                                </div>
+                                <p class="mbr-author-name mbr-bold mbr-fonts-style mbr-white display-5">
+                                    {{page.news_portal_name}}
+
+                                </p>
                         </div>
+                        <div class="card-footer">
+                            <div class="mbr-text mbr-fonts-style mbr-white display-7">
+                                See latest posts from this page
+                            </div>
+                            </a>
+                        </div>
+
                     </div>
 
-                    <div class="col-xs-12 col-md-6 align-left">
-                        <div class="timeline-text-content">
-                            <h4 class="mbr-section-subtitle pb-2 mbr-fonts-style display-5">
-                                {{ news.news_site_name }}
-                                <br>
-                                <br>
-                                <p class="mbr-timeline-date mbr-fonts-style display-4">
-                                    Թարմացվել է {{ news.update_time }}</p>
-                            </h4>
-                        </div>
-                    </div>
                 </div>
                 {% endfor %}
             </div>
@@ -131,6 +127,10 @@
     </section>
 
     <section once="footers" class="cid-rKZVDTlWH9" id="footer6-23">
+
+
+
+
 
         <div class="container">
             <div class="media-container-row align-center mbr-white">
@@ -147,14 +147,13 @@
     <script src="{% static 'assets/web/assets/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'assets/popper/popper.min.js' %}"></script>
     <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'assets/smoothscroll/smooth-scroll.js' %}"></script>
     <script src="{% static 'assets/tether/tether.min.js' %}"></script>
-    <script src="{% static 'assets/viewportchecker/jquery.viewportchecker.js' %}"></script>
     <script src="{% static 'assets/dropdown/js/nav-dropdown.js' %}"></script>
     <script src="{% static 'assets/dropdown/js/navbar-dropdown.js' %}"></script>
     <script src="{% static 'assets/touchswipe/jquery.touch-swipe.min.js' %}"></script>
+    <script src="{% static 'assets/viewportchecker/jquery.viewportchecker.js' %}"></script>
+    <script src="{% static 'assets/smoothscroll/smooth-scroll.js' %}"></script>
     <script src="{% static 'assets/theme/js/script.js' %}"></script>
-    <script src="{% static 'assets/formoid/formoid.min.js' %}"></script>
 
 
     <input name="animation" type="hidden">
